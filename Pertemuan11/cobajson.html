@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Buat object dari JSON string</h2>
+
+<p id="demo">
+</p>
+<script>
+    let text ='{"employees":[' +
+    '{"firstName":"Adam","lastName":"Jorgi"},' +
+    '{"firstName":"Entus","lastName":"Farras"},' +
+    '{"firstName":"Nadhila","lastName":"Renaldi"}]}' ;
+    const obj = JSON.parse(text);
+    obj.employees[1].firstName + " " + obj.employees[1].lastName;
+
+    let html = "";
+    for(let i = 0; i < obj.employees.length; i++) {
+        html += (i+1) + ". " + obj.employees[i].firstName + " " + obj.employees[i].lastName + "<br>";
+    }
+    
+    document.getElementById("demo").innerHTML = html;
+</script>
+</body>
+</html>

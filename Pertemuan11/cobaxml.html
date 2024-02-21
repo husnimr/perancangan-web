@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Buat object dari JSON string</h2>
+
+<p id="demo">
+</p>
+<script>
+    var parser, xmlDoc;
+    var text = "<bookstore><book>" +
+        "<title> Timun Mas </title>" +
+        "<author> Najla Adi </author>" +
+        "<year> 1980 </year>" +
+        "</book> </bookstore>";
+    parser = new DOMParser();
+    xmlDoc = parser.parseFromString(text, "text/html");
+    // document.getElementById("demo").innerHTML =
+    // xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue; 
+
+    // Loop through book elements and display data
+    let html = "";
+    let books = xmlDoc.getElementsByTagName("book");
+    for(let i = 0; i < books.length; i++) {
+        let title = books[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+        let author = books[i].getElementsByTagName("author")[0].childNodes[0].nodeValue;
+        let year = books[i].getElementsByTagName("year")[0].childNodes[0].nodeValue;
+        
+        html += (i+1) + ". " + title + ", " + author + ", " + year + "<br>";
+    }
+    
+    document.getElementById("demo").innerHTML = html;
+
+</script>
+</body>
+</html>

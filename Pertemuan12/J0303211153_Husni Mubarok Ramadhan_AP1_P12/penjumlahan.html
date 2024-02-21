@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Penjumlahan Bilangan</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Penjumlahan bilangan</h4>
+                        <div class="form-group">
+                            <input type="text" id="bil1" class="form-control" placeholder="Bilangan 1">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="bil2" class="form-control" placeholder="Bilangan 2">
+                        </div>
+                        <div class="form-group mb-0">
+                            <input type="text" id="total" class="form-control" placeholder="Hasil Penjumlahan" readonly="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#bil1, #bil2").keyup(function() {
+                var bil1  = $("#bil1").val();
+                var bil2 = $("#bil2").val();
+
+                var total = parseInt(bil1) + parseInt(bil2);
+                $("#total").val(total);
+            });
+        });
+    </script>
+</body>
+</html>

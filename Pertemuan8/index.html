@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test javascript</title>
+</head>
+<body>
+    <p>Your Web content goes here</p> 
+    <p><script>
+        // Your JavaScript code goes here
+        // document.write(document)
+        window.alert("window alert" + "string 2")
+        Math.sqrt(16);
+
+        // bikin variabel
+        var variabel1;
+        var n1,n2;
+        n1 = 5;
+        n2 = 15;
+        variabel1 = "teks";
+        var sum = 5 + 10;
+
+        // negasi (!)
+        !(1 == 2); // hasilnya true
+
+        // looping
+        for (var i = 0; i < 10; i++) {
+            console.log(i);
+            
+        }
+
+        var color = "blue";
+        while (color == "blue") {
+            console.log("Color is still blue");
+            if (Math.random() > 0.5) {
+                color = "not blue"
+            }
+        }
+        
+        // fungsi
+        cetakteks(variabel1);
+        function cetakteks(variabel1) {
+            document.write("<p>" + variabel1 + "</p>");
+        }
+
+        var hasil = hitung(n1,n2);
+        document.write("<p>" + hasil + "</p>");
+        function hitung(n1,n2) {
+            return n1+n2;
+        }
+
+        function modifyValue(myValue) {
+            document.write(myValue + "<br>");
+            myValue = "new value"
+            document.write(myValue + "<br>");
+        }
+
+        var value = "old value";
+        modifyValue(value);
+        document.write(value + "<br>");
+
+        var list = new Array(10);
+        list[0] = "List 1";
+        var list2 = ["kolak", "bala-bala", "kurma"]; // literal
+
+        var panjang_list = list.length;
+        document.write(panjang_list + "<br>");
+
+        // object
+        var car = {color: "blue", numberOfDoors: 4, interior: "leather"}
+        document.write(car.color + "<br>");
+        document.write(car.numberOfDoors + "<br>");
+        document.write(car.interior + "<br>");
+
+        car.description = function(){
+            return color + "car" + "with" + numberOfDoors + "doors" + and + interior + "interior";
+        }
+        
+
+    </script>
+    
+
+
+    </p>
+</body>
+</html>

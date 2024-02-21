@@ -1,0 +1,8 @@
+Nama	: Husni Mubarok Ramadhan
+NIM	: J0303211153
+Kelas	: A-P1
+
+1). Menu Home atau index.html, pada sidebar "Info Pembuat" menggunakan jQuery toggle() jadi pada saat diklik "Info Pembuat" bisa menampilkan dan menyembunyikan elemen.
+2). Menu Profile atau profile.html, pada logo ManCity menggunakan jQuery hover() jadi pada saat terkena kursor maka logo akan berubah menjadi gelap dan jika tidak terkena maka akan kembali ke semula.
+3). Menu Contact atau contact.html, pada saat klik "Send" menggunakan jQuery Window alert(), jadi pada saat diklik maka akan muncul popup pesan "Pesan kamu sudah terkirim!" dan klik OK.
+4). Menu Contact atau contact.html, pada phone atau email yang berwarna biru menggunakan JavaScript Copy Text to Clipboard, jadi apabila diklik phone atau email maka nomor atau email akan ter-copy dan muncul popup.
